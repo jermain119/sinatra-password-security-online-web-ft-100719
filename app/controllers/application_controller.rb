@@ -32,6 +32,7 @@ user = User.new(:username => params[:username], :password => params[:password])
 		end
 	end
 end 
+
 	get "/success" do
 		if logged_in?
 			erb :success
