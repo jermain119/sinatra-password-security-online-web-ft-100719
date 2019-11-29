@@ -24,14 +24,9 @@ class ApplicationController < Sinatra::Base
 		erb :login
 	end
 
-user = User.new(:username => params[:username], :password => params[:password])
-		if user.save
-			redirect "/login"
-		else
-			redirect "/failure"
-		end
+	post "/login" do
+		#your code here!
 	end
-end 
 
 	get "/success" do
 		if logged_in?
